@@ -119,7 +119,9 @@ struct DetailView: View {
                     return
                 }
 
+                // ソート設定
                 let sort = NSSortDescriptor(key: HKSampleSortIdentifierEndDate, ascending: false)
+                // どのタイプのデータを取るか，条件，最大取得数，ソートの順番，クロージャ
                 let query = HKSampleQuery(sampleType: heartType,
                                           predicate: nil,
                                           limit: 1,
